@@ -169,12 +169,18 @@ player_a = scale_norm.transform(player_a)
 prediction = model.predict(player_a)
 print(prediction)
 
+prediction_class = (prediction >= 0.5) * 1
+print(prediction_class)
+#---------------------------
 
 player_b = [[11, 27, 0, 9, 5, 0, 0]]
 player_b = scale_norm.transform(player_b)
 
 prediction = model.predict(player_b)
 print(prediction)
+
+prediction_class = (prediction >= 0.5) * 1
+print(prediction_class)
 
 
 
